@@ -2,6 +2,8 @@ import React from 'react';
 
 // import { Container } from './styles';
 
+import { Container } from '../styles/components/MemeImageStyle'
+
 interface MemeProps {
   url: string
   width: number
@@ -10,12 +12,14 @@ interface MemeProps {
 
 const MemeImage: React.FC<MemeProps> = ({ url, width, height }) => {
   return (  
-    <img 
-    src={url} 
-    alt="meme"
-    width={width}
-    height={height}
-    />
+    <Container>
+      <img 
+        src={url} 
+        alt="meme"
+        width={width}
+        height={height}
+      />
+    </Container>
   )
 }
 
